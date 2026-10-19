@@ -422,6 +422,8 @@ footer a:hover{color:var(--gold-2)}
         <div class="info">
           <div class="row"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span>
             <div><small>Dirección</small>FORO 4, Piso 11. Manuel J. Clouthier 304, Jardines del Campestre, 37128 León de los Aldama, Gto.</div></div>
+          <div class="row"><span class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 7l9 6 9-6"/></svg></span>
+            <div><small>Correo</small><a href="mailto:contacto@inveralpe.com">contacto@inveralpe.com</a></div></div>
         </div>
       </div>
 
@@ -468,7 +470,7 @@ footer a:hover{color:var(--gold-2)}
       </div>
       <div><h4>Navegación</h4><ul><li><a href="#nosotros">Nosotros</a></li><li><a href="#proyectos">Proyectos</a></li><li><a href="#alianzas">Alianzas</a></li><li><a href="#contacto">Contacto</a></li></ul></div>
       <div><h4>Proyectos</h4><ul><li><a href="https://torreares.com/" target="_blank" rel="noopener">Torre Ares</a></li><li><a href="https://grandares.com/" target="_blank" rel="noopener">GrandAres</a></li><li><a href="#proyectos">Plaza París</a></li></ul></div>
-      <div><h4>Contacto</h4><ul><li>FORO 4, Piso 11</li><li>Manuel J. Clouthier 304</li><li>Jardines del Campestre, León, Gto.</li></ul></div>
+      <div><h4>Contacto</h4><ul><li>FORO 4, Piso 11</li><li>Manuel J. Clouthier 304</li><li>Jardines del Campestre, León, Gto.</li><li><a href="mailto:contacto@inveralpe.com">contacto@inveralpe.com</a></li></ul></div>
     </div>
     <div class="f-bottom"><span>© <span id="yr">2026</span> Grupo InverAlpe. Todos los derechos reservados.</span><span>León, Guanajuato, México</span></div>
   </div>
@@ -501,7 +503,7 @@ var WHATSAPP = '';
     });
     document.querySelector('.wa').hidden=false;
   }else{
-    document.getElementById('formNote').textContent='Muy pronto podrás enviarnos tu mensaje desde aquí.';
+    document.getElementById('formNote').textContent='Al enviar se abrirá tu correo con el mensaje listo.';
   }
 
   document.getElementById('yr').textContent=new Date().getFullYear();
@@ -513,7 +515,7 @@ var WHATSAPP = '';
     var txt='Hola, soy '+n.value.trim()+'.\nMe interesa: '+document.getElementById('interes').value+'.\nTeléfono: '+t.value.trim();
     var c=document.getElementById('correo').value.trim(); if(c) txt+='\nCorreo: '+c;
     var m=document.getElementById('msg').value.trim(); if(m) txt+='\n\n'+m;
-    if(!WHATSAPP){document.getElementById('formNote').textContent='Gracias. Muy pronto habilitaremos este formulario.';return}
+    if(!WHATSAPP){window.location.href='mailto:contacto@inveralpe.com?subject='+encodeURIComponent('Contacto web: '+document.getElementById('interes').value)+'&body='+encodeURIComponent(txt);return}
     window.open('https://wa.me/'+WHATSAPP+'?text='+encodeURIComponent(txt),'_blank','noopener');
   });
 })();
