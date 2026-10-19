@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Grupo InverAlpe | Desarrollo e inversión en terrenos en León, Gto.</title>
+<meta name="description" content="Grupo InverAlpe desarrolla, construye y comercializa terrenos con alto potencial de plusvalía en León, Guanajuato. Más de 10 años de experiencia. Agenda tu asesoría sin costo.">
+<meta property="og:title" content="Grupo InverAlpe | In tempore et modo">
+<meta property="og:description" content="Invierte con certeza. Crece con plusvalía. Terrenos y desarrollos con más de 10 años de experiencia.">
+<meta property="og:image" content="img/hero.jpg">
+<meta name="theme-color" content="#14130f">
+<link rel="icon" href="img/icono.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#14130f; --ink-2:#1d1b16; --ink-3:#2a2720;
+  --ivory:#f6f2ea; --paper:#fbf9f4; --line:#e4ddcf;
+  --gold:#b8925a; --gold-2:#d4b483; --gold-d:#8e6d3d;
+  --text:#2b2924; --muted:#6f6a5f; --muted-l:#a9a294;
+  --serif:'Cormorant Garamond',Georgia,serif; --sans:'Manrope',system-ui,-apple-system,Segoe UI,sans-serif;
+  --wrap:1200px; --r:4px; --ease:cubic-bezier(.2,.7,.2,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{font-family:var(--sans);color:var(--text);background:var(--paper);line-height:1.7;font-size:16px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+.eyebrow{font-size:.72rem;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);font-weight:600;display:inline-flex;align-items:center;gap:14px}
+.eyebrow::before{content:"";width:36px;height:1px;background:currentColor}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.08;color:var(--ink);letter-spacing:-.01em}
+h2{font-size:clamp(2.2rem,4.6vw,3.6rem)}
+h2 em,h1 em{font-style:italic;color:var(--gold)}
+.lead{font-size:1.08rem;color:var(--muted);max-width:56ch}
+.btn{display:inline-flex;align-items:center;gap:12px;padding:16px 30px;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;font-weight:600;border-radius:var(--r);transition:all .35s var(--ease);cursor:pointer;border:1px solid transparent;font-family:var(--sans)}
+.btn svg{width:16px;height:16px;transition:transform .35s var(--ease)}
+.btn:hover svg{transform:translateX(4px)}
+.btn-gold{background:var(--gold);color:#fff}
+.btn-gold:hover{background:var(--gold-d)}
+.btn-ghost{border-color:rgba(255,255,255,.45);color:#fff}
+.btn-ghost:hover{background:#fff;color:var(--ink)}
+.btn-dark{background:var(--ink);color:#fff}
+.btn-dark:hover{background:var(--gold)}
+.link-arrow{display:inline-flex;align-items:center;gap:10px;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:var(--ink);border-bottom:1px solid var(--gold);padding-bottom:6px;transition:gap .3s var(--ease),color .3s}
+.link-arrow:hover{gap:16px;color:var(--gold-d)}
+.link-arrow svg{width:14px;height:14px}
+
+/* ===== NAV ===== */
+.nav{position:fixed;inset:0 0 auto 0;z-index:50;transition:background .4s,box-shadow .4s,padding .4s;padding:22px 0}
+.nav.solid{background:rgba(20,19,15,.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);padding:12px 0;box-shadow:0 1px 0 rgba(255,255,255,.06)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;gap:12px;color:#fff}
+.brand img{height:54px;width:auto;filter:brightness(0) invert(1);transition:height .4s}
+.nav.solid .brand img{height:44px}
+.brand .wordmark{display:none;font-family:var(--serif);line-height:1}
+.brand .wordmark b{display:block;font-size:1.5rem;font-weight:600;letter-spacing:.14em}
+.brand .wordmark small{font-size:.6rem;letter-spacing:.34em;color:var(--gold-2);font-family:var(--sans)}
+.brand.noimg img{display:none}.brand.noimg .wordmark{display:block}
+.menu{display:flex;align-items:center;gap:34px;list-style:none}
+.menu a{color:rgba(255,255,255,.82);font-size:.76rem;letter-spacing:.18em;text-transform:uppercase;font-weight:500;position:relative;padding:6px 0;transition:color .3s}
+.menu a::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:0;background:var(--gold-2);transition:width .35s var(--ease)}
+.menu a:hover{color:#fff}.menu a:hover::after{width:100%}
+.menu .btn{padding:12px 22px;color:#fff}
+.menu .btn::after{display:none}
+.burger{display:none;background:none;border:0;width:44px;height:44px;cursor:pointer;position:relative}
+.burger span{position:absolute;left:10px;right:10px;height:1.5px;background:#fff;transition:all .35s var(--ease)}
+.burger span:nth-child(1){top:16px}.burger span:nth-child(2){top:22px}.burger span:nth-child(3){top:28px}
+.nav.open .burger span:nth-child(1){top:22px;transform:rotate(45deg)}
+.nav.open .burger span:nth-child(2){opacity:0}
+.nav.open .burger span:nth-child(3){top:22px;transform:rotate(-45deg)}
+
+/* ===== HERO ===== */
+.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:flex-end;color:#fff;background:var(--ink) url("img/hero.jpg") center/cover no-repeat;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,19,15,.55) 0%,rgba(20,19,15,.25) 35%,rgba(20,19,15,.85) 100%),linear-gradient(90deg,rgba(20,19,15,.75) 0%,rgba(20,19,15,0) 70%)}
+.hero .wrap{position:relative;width:100%;padding-top:160px;padding-bottom:64px}
+.hero h1{color:#fff;font-size:clamp(3rem,8vw,6.6rem);font-weight:400;margin:22px 0 26px;max-width:12ch}
+.hero h1 em{color:var(--gold-2)}
+.hero p{max-width:52ch;color:rgba(255,255,255,.82);font-size:1.1rem;margin-bottom:38px}
+.hero .actions{display:flex;flex-wrap:wrap;gap:14px}
+.hero-stats{margin-top:80px;display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid rgba(255,255,255,.18)}
+.hero-stats div{padding:26px 24px 0 0}
+.hero-stats div+div{padding-left:28px;border-left:1px solid rgba(255,255,255,.18)}
+.hero-stats b{display:block;font-family:var(--serif);font-weight:400;font-size:clamp(2rem,3.6vw,2.8rem);color:var(--gold-2);line-height:1}
+.hero-stats span{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.7)}
+.scroll-cue{position:absolute;right:28px;bottom:64px;writing-mode:vertical-rl;font-size:.66rem;letter-spacing:.4em;text-transform:uppercase;color:rgba(255,255,255,.6);display:flex;align-items:center;gap:14px}
+.scroll-cue::after{content:"";width:1px;height:70px;background:linear-gradient(var(--gold-2),transparent);animation:cue 2.2s infinite}
+@keyframes cue{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+section{padding:130px 0}
+
+/* ===== NOSOTROS ===== */
+.about{display:grid;grid-template-columns:1fr 1.15fr;gap:90px;align-items:start}
+.about h2{margin-top:22px}
+.about .body p{margin-bottom:22px;color:var(--muted);font-size:1.04rem}
+.about .body p:first-child{font-family:var(--serif);font-size:1.6rem;line-height:1.4;color:var(--ink)}
+.motto{margin-top:38px;padding-top:30px;border-top:1px solid var(--line);display:flex;gap:22px;align-items:center}
+.motto span{font-family:var(--serif);font-style:italic;font-size:1.5rem;color:var(--gold-d)}
+.motto small{color:var(--muted);font-size:.85rem;line-height:1.5}
+
+/* ===== DIFERENCIALES ===== */
+.diffs{background:var(--ivory)}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:40px;margin-bottom:70px;flex-wrap:wrap}
+.section-head h2{margin-top:20px;max-width:16ch}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.card{padding:44px 34px 48px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--ivory);transition:background .45s var(--ease);position:relative}
+.card:hover{background:#fff}
+.card .num{font-family:var(--serif);font-size:1rem;color:var(--gold);letter-spacing:.1em}
+.card svg{width:40px;height:40px;stroke:var(--gold-d);stroke-width:1.2;fill:none;margin:30px 0 26px}
+.card h3{font-size:1.55rem;margin-bottom:14px}
+.card p{color:var(--muted);font-size:.95rem}
+
+/* ===== PROYECTOS ===== */
+.projects .section-head{margin-bottom:80px}
+.project{display:grid;grid-template-columns:1.25fr 1fr;align-items:center;margin-bottom:110px}
+.project:last-child{margin-bottom:0}
+.project:nth-child(even){grid-template-columns:1fr 1.25fr}
+.project:nth-child(even) .p-media{order:2}
+.p-media{position:relative;overflow:hidden;aspect-ratio:4/3;background:linear-gradient(135deg,var(--ink-3),var(--ink));border-radius:var(--r)}
+.p-media .img{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform 1.4s var(--ease)}
+.project:hover .p-media .img{transform:scale(1.05)}
+.p-media .tag{position:absolute;left:24px;top:24px;background:rgba(20,19,15,.78);backdrop-filter:blur(6px);color:#fff;font-size:.66rem;letter-spacing:.24em;text-transform:uppercase;padding:9px 14px;border-radius:2px}
+.p-body{padding:0 0 0 72px}
+.project:nth-child(even) .p-body{padding:0 72px 0 0}
+.p-body .idx{font-family:var(--serif);font-size:5rem;line-height:1;color:var(--line);font-weight:500}
+.p-body h3{font-size:clamp(2.2rem,4vw,3.2rem);margin:6px 0 20px}
+.p-body p{color:var(--muted);margin-bottom:30px}
+.p-body .pills{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:34px}
+.p-body .pills span{font-size:.72rem;letter-spacing:.08em;padding:7px 14px;border:1px solid var(--line);border-radius:40px;color:var(--text)}
+
+/* ===== ALIANZA ===== */
+.alliance{background:var(--ink);color:#fff;position:relative;overflow:hidden}
+.alliance::after{content:"";position:absolute;right:-180px;top:-180px;width:560px;height:560px;border:1px solid rgba(184,146,90,.22);border-radius:50%}
+.alliance::before{content:"";position:absolute;right:-60px;top:-60px;width:320px;height:320px;border:1px solid rgba(184,146,90,.14);border-radius:50%}
+.alliance .wrap{position:relative;z-index:1}
+.alliance h2{color:#fff;margin:22px 0 26px;max-width:14ch}
+.alliance .lead{color:rgba(255,255,255,.68)}
+.al-grid{display:grid;grid-template-columns:1fr 1fr;gap:90px;align-items:center}
+.equation{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin:44px 0 46px;font-family:var(--serif);font-size:clamp(1.3rem,2.2vw,1.75rem)}
+.equation span{padding:12px 22px;border:1px solid rgba(255,255,255,.2);border-radius:60px}
+.equation i{font-style:normal;color:var(--gold-2);font-size:1.6em;line-height:1}
+.equation span:last-child{background:var(--gold);border-color:var(--gold)}
+.steps{list-style:none;counter-reset:s}
+.steps li{counter-increment:s;display:grid;grid-template-columns:64px 1fr;gap:10px;padding:30px 0;border-top:1px solid rgba(255,255,255,.12)}
+.steps li:last-child{border-bottom:1px solid rgba(255,255,255,.12)}
+.steps li::before{content:"0" counter(s);font-family:var(--serif);font-size:1.6rem;color:var(--gold-2)}
+.steps h3{color:#fff;font-size:1.6rem;margin-bottom:6px}
+.steps p{color:rgba(255,255,255,.62);font-size:.95rem}
+
+/* ===== CTA ===== */
+.cta{position:relative;padding:130px 0;color:#fff;text-align:center;background:var(--ink-2) url("img/contacto.jpg") center/cover fixed}
+.cta::before{content:"";position:absolute;inset:0;background:rgba(20,19,15,.72)}
+.cta .wrap{position:relative}
+.cta h2{color:#fff;margin:22px auto 22px;max-width:18ch}
+.cta p{color:rgba(255,255,255,.78);max-width:52ch;margin:0 auto 40px;font-size:1.08rem}
+.cta .eyebrow::after{content:"";width:36px;height:1px;background:currentColor}
+
+/* ===== CONTACTO ===== */
+.contact-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:80px}
+.contact-grid h2{margin:20px 0 22px}
+.info{margin-top:44px;display:grid;gap:30px}
+.info .row{display:grid;grid-template-columns:46px 1fr;gap:18px;align-items:start}
+.info .ic{width:46px;height:46px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center}
+.info .ic svg{width:18px;height:18px;stroke:var(--gold-d);fill:none;stroke-width:1.5}
+.info small{display:block;font-size:.68rem;letter-spacing:.24em;text-transform:uppercase;color:var(--muted-l);margin-bottom:4px;font-weight:600}
+.info a:hover{color:var(--gold-d)}
+form{background:#fff;padding:52px;border:1px solid var(--line);border-radius:var(--r);box-shadow:0 30px 60px -40px rgba(20,19,15,.25)}
+form h3{font-size:1.9rem;margin-bottom:6px}
+form > p{color:var(--muted);font-size:.92rem;margin-bottom:32px}
+.f2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.field{position:relative;margin-bottom:22px}
+.field label{display:block;font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:var(--muted);margin-bottom:8px}
+.field input,.field select,.field textarea{width:100%;font:inherit;font-size:.98rem;color:var(--ink);background:transparent;border:0;border-bottom:1px solid var(--line);padding:10px 0;outline:none;transition:border-color .3s;border-radius:0;-webkit-appearance:none;appearance:none}
+.field select{background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none' stroke='%238e6d3d' stroke-width='1.5'%3E%3Cpath d='M1 1l5 5 5-5'/%3E%3C/svg%3E") right 4px center no-repeat}
+.field textarea{resize:vertical;min-height:90px}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--gold)}
+form .btn{width:100%;justify-content:center;margin-top:10px}
+form .note{font-size:.78rem;color:var(--muted-l);text-align:center;margin-top:16px}
+.map{margin-top:90px;height:380px;border-radius:var(--r);overflow:hidden;filter:grayscale(1) contrast(1.05);border:1px solid var(--line)}
+.map iframe{width:100%;height:100%;border:0}
+
+/* ===== FOOTER ===== */
+footer{background:var(--ink);color:rgba(255,255,255,.6);padding:80px 0 34px;font-size:.92rem}
+.f-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:50px;padding-bottom:60px;border-bottom:1px solid rgba(255,255,255,.1)}
+footer .brand img{height:70px}
+footer .tagline{font-family:var(--serif);font-style:italic;font-size:1.25rem;color:var(--gold-2);margin-top:22px}
+footer h4{font-size:.7rem;letter-spacing:.26em;text-transform:uppercase;color:#fff;margin-bottom:22px;font-weight:600}
+footer ul{list-style:none;display:grid;gap:12px}
+footer a:hover{color:var(--gold-2)}
+.f-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-top:30px;font-size:.78rem;letter-spacing:.06em}
+
+/* ===== WHATSAPP FLOAT ===== */
+.wa{position:fixed;right:24px;bottom:24px;z-index:60;width:60px;height:60px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 12px 30px -8px rgba(0,0,0,.4);transition:transform .3s var(--ease)}
+.wa:hover{transform:scale(1.08)}
+.wa svg{width:30px;height:30px;fill:#fff}
+.wa::before{content:"";position:absolute;inset:0;border-radius:50%;background:#25d366;animation:pulse 2.4s infinite;z-index:-1}
+@keyframes pulse{0%{transform:scale(1);opacity:.6}100%{transform:scale(1.7);opacity:0}}
+
+/* ===== REVEAL ===== */
+.rv{opacity:0;transform:translateY(34px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
+.rv.in{opacity:1;transform:none}
+.rv.d1{transition-delay:.12s}.rv.d2{transition-delay:.24s}.rv.d3{transition-delay:.36s}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.wa::before,.scroll-cue::after{animation:none}}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width:1024px){
+  .grid4{grid-template-columns:repeat(2,1fr)}
+  .about,.al-grid,.contact-grid{grid-template-columns:1fr;gap:56px}
+  .project,.project:nth-child(even){grid-template-columns:1fr;gap:36px}
+  .project:nth-child(even) .p-media{order:0}
+  .p-body,.project:nth-child(even) .p-body{padding:0}
+  .f-grid{grid-template-columns:1fr 1fr}
+  .cta{background-attachment:scroll}
+}
+@media (max-width:860px){
+  .menu{position:fixed;inset:0;background:var(--ink);flex-direction:column;justify-content:center;gap:30px;opacity:0;pointer-events:none;transition:opacity .4s}
+  .menu a{font-size:1rem}
+  .nav.open .menu{opacity:1;pointer-events:auto}
+  .burger{display:block;z-index:2}
+  .brand{z-index:2}
+}
+@media (max-width:640px){
+  section{padding:90px 0}
+  .wrap{padding:0 20px}
+  .hero .wrap{padding-bottom:40px}
+  .hero-stats{grid-template-columns:1fr;margin-top:50px}
+  .hero-stats div,.hero-stats div+div{padding:18px 0;border-left:0;border-bottom:1px solid rgba(255,255,255,.12);display:flex;align-items:baseline;gap:16px}
+  .scroll-cue{display:none}
+  .grid4{grid-template-columns:1fr}
+  .f2{grid-template-columns:1fr;gap:0}
+  form{padding:34px 24px}
+  .f-grid{grid-template-columns:1fr}
+  .project{margin-bottom:80px}
+  .p-body .idx{font-size:3.6rem}
+  .map{margin-top:60px;height:300px}
+  .btn{padding:15px 24px}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a href="#inicio" class="brand" id="brand" aria-label="Grupo InverAlpe, inicio">
+      <img src="img/logo.png" alt="Grupo InverAlpe" onerror="this.parentElement.classList.add('noimg')">
+      <span class="wordmark"><b>INVERALPE</b><small>GRUPO</small></span>
+    </a>
+    <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+    <ul class="menu" id="menu">
+      <li><a href="#nosotros">Nosotros</a></li>
+      <li><a href="#proyectos">Proyectos</a></li>
+      <li><a href="#alianzas">Alianzas</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+      <li><a class="btn btn-gold" href="https://wa.me/524779199794?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20asesor%C3%ADa%20con%20Grupo%20InverAlpe." target="_blank" rel="noopener">Asesoría</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="inicio">
+  <div class="wrap">
+    <span class="eyebrow rv">Grupo InverAlpe · In tempore et modo</span>
+    <h1 class="rv d1">Invierte con certeza. <em>Crece</em> con plusvalía.</h1>
+    <p class="rv d2">Desarrollamos y comercializamos terrenos con alto potencial de crecimiento, respaldados por más de 10 años de experiencia en construcción e inversión inmobiliaria.</p>
+    <div class="actions rv d3">
+      <a class="btn btn-gold" href="https://wa.me/524779199794?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20asesor%C3%ADa%20sin%20costo." target="_blank" rel="noopener">Agenda tu asesoría
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="btn btn-ghost" href="#proyectos">Ver proyectos</a>
+    </div>
+    <div class="hero-stats rv d3">
+      <div><b>+10</b><span>Años de experiencia</span></div>
+      <div><b>3</b><span>Desarrollos destacados</span></div>
+      <div><b>100%</b><span>Procesos en regla</span></div>
+    </div>
+  </div>
+  <div class="scroll-cue">Descubre</div>
+</section>
+
+<!-- NOSOTROS -->
+<section id="nosotros">
+  <div class="wrap about">
+    <div class="rv">
+      <span class="eyebrow">Quiénes somos</span>
+      <h2>Construimos <em>patrimonio</em> con visión de largo plazo.</h2>
+    </div>
+    <div class="body rv d1">
+      <p>Somos una empresa mexicana especializada en el desarrollo, construcción y comercialización de terrenos, enfocada en crear oportunidades de inversión seguras, accesibles y con alta plusvalía.</p>
+      <p>Contamos con más de 10 años de experiencia en el sector de la construcción y desarrollo inmobiliario, respaldando cada proyecto con planeación estratégica, análisis legal y visión a largo plazo.</p>
+      <p>Nuestro conocimiento del mercado nos permite ofrecer terrenos cuidadosamente seleccionados, con ubicación estratégica y alto potencial de crecimiento.</p>
+      <div class="motto"><span>In tempore et modo</span><small>En tiempo y forma: el compromiso que guía cada proyecto que emprendemos.</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- DIFERENCIALES -->
+<section class="diffs">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="rv"><span class="eyebrow">Nuestros diferenciales</span><h2>Por qué invertir con <em>InverAlpe</em></h2></div>
+      <p class="lead rv d1">Cada operación se respalda con conocimiento técnico, certeza jurídica y un acompañamiento cercano de principio a fin.</p>
+    </div>
+    <div class="grid4">
+      <article class="card rv">
+        <span class="num">01</span>
+        <svg viewBox="0 0 40 40"><path d="M6 34h28M10 34V14l10-7 10 7v20M16 34v-9h8v9M15 18h3M22 18h3"/></svg>
+        <h3>+10 años de experiencia</h3>
+        <p>En construcción y desarrollo inmobiliario, respaldando cada proyecto con conocimiento técnico y visión estratégica.</p>
+      </article>
+      <article class="card rv d1">
+        <span class="num">02</span>
+        <svg viewBox="0 0 40 40"><path d="M6 32l9-10 7 6 12-14M26 14h8v8"/><path d="M6 36h28"/></svg>
+        <h3>Alto potencial de plusvalía</h3>
+        <p>Terrenos ubicados en zonas con crecimiento proyectado y análisis previo de mercado.</p>
+      </article>
+      <article class="card rv d2">
+        <span class="num">03</span>
+        <svg viewBox="0 0 40 40"><path d="M11 5h13l7 7v23H11z"/><path d="M24 5v7h7M16 20h10M16 25h10M16 30h6"/></svg>
+        <h3>Certeza jurídica</h3>
+        <p>Procesos legales y documentación en regla, con total transparencia en cada operación.</p>
+      </article>
+      <article class="card rv d3">
+        <span class="num">04</span>
+        <svg viewBox="0 0 40 40"><circle cx="15" cy="13" r="5"/><circle cx="27" cy="15" r="4"/><path d="M5 33c0-6 4.5-10 10-10s10 4 10 10M24 23.5c1-.3 2-.5 3-.5 4.5 0 8 3.5 8 9"/></svg>
+        <h3>Acompañamiento integral</h3>
+        <p>Desde la elección del terreno hasta la entrega, con asesoría personalizada al inversionista.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- PROYECTOS -->
+<section class="projects" id="proyectos">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="rv"><span class="eyebrow">Portafolio</span><h2>Proyectos que <em>construyen</em> valor</h2></div>
+      <p class="lead rv d1">Desarrollos residenciales y comerciales concebidos con arquitectura contemporánea, acabados de alta gama y ubicaciones estratégicas.</p>
+    </div>
+
+    <div class="project-list">
+      <article class="project">
+        <div class="p-media rv"><div class="img" style="background-image:url('img/torre-ares.jpg')"></div><span class="tag">Residencial premium</span></div>
+        <div class="p-body rv d1">
+          <span class="idx">01</span>
+          <h3>Torre Ares</h3>
+          <p>Un privilegiado proyecto residencial premium, disponible para un reservado número de personas. Desde la conceptualización y el diseño hasta la construcción y los acabados de alta gama, en Torre Ares participan los profesionales más destacados de la región.</p>
+          <div class="pills"><span>Residencial</span><span>Acabados de alta gama</span><span>Exclusivo</span></div>
+          <a class="link-arrow" href="https://torreares.com/" target="_blank" rel="noopener">Visitar sitio oficial <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="p-media rv"><div class="img" style="background-image:url('img/grandares.jpg')"></div><span class="tag">Departamentos de lujo</span></div>
+        <div class="p-body rv d1">
+          <span class="idx">02</span>
+          <h3>GrandAres</h3>
+          <p>Un desarrollo de departamentos de lujo para quienes buscan vivir o invertir con exclusividad. Cada espacio combina arquitectura contemporánea, acabados premium y una ubicación estratégica que garantiza confort, estilo y alta plusvalía a largo plazo.</p>
+          <div class="pills"><span>Departamentos</span><span>Arquitectura contemporánea</span><span>Inversión</span></div>
+          <a class="link-arrow" href="https://grandares.com/" target="_blank" rel="noopener">Visitar sitio oficial <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="p-media rv"><div class="img" style="background-image:url('img/plaza-paris.jpg')"></div><span class="tag">Desarrollo comercial</span></div>
+        <div class="p-body rv d1">
+          <span class="idx">03</span>
+          <h3>Plaza París</h3>
+          <p>Un desarrollo comercial pensado para impulsar marcas y negocios en una zona de alto flujo y crecimiento. Su diseño moderno, excelente ubicación y distribución funcional la convierten en una oportunidad ideal para invertir, emprender o expandir tu negocio.</p>
+          <div class="pills"><span>Locales comerciales</span><span>Alto flujo</span><span>Diseño moderno</span></div>
+          <a class="link-arrow" href="https://wa.me/524779199794?text=Hola%2C%20me%20interesa%20recibir%20informaci%C3%B3n%20de%20Plaza%20Par%C3%ADs." target="_blank" rel="noopener">Solicitar información <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ALIANZAS -->
+<section class="alliance" id="alianzas">
+  <div class="wrap al-grid">
+    <div class="rv">
+      <span class="eyebrow">¿Tienes terreno?</span>
+      <h2>Construimos <em>contigo</em>.</h2>
+      <p class="lead">Si ya cuentas con un terreno, podemos formar una alianza estratégica. Sumamos nuestra experiencia para convertirlo en un proyecto rentable, seguro y bien ejecutado, trabajando de la mano en cada etapa.</p>
+      <div class="equation"><span>Tu terreno</span><i>+</i><span>Nuestra experiencia</span><i>=</i><span>Un proyecto exitoso</span></div>
+      <a class="btn btn-gold" href="https://wa.me/524779199794?text=Hola%2C%20tengo%20un%20terreno%20y%20me%20interesa%20una%20alianza%20con%20Grupo%20InverAlpe." target="_blank" rel="noopener">Hablemos de tu proyecto
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+    <ol class="steps rv d1">
+      <li><div><h3>Planeación</h3><p>Analizamos tu terreno y definimos el proyecto que maximiza su valor.</p></div></li>
+      <li><div><h3>Desarrollo</h3><p>Nos encargamos del diseño, permisos y estrategia de cada etapa.</p></div></li>
+      <li><div><h3>Construcción</h3><p>Ejecutamos la obra con calidad y en tiempo y forma, hasta la entrega.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="wrap">
+    <span class="eyebrow rv">Asesoría sin costo</span>
+    <h2 class="rv d1">Da el primer paso hacia tu <em>inversión</em>.</h2>
+    <p class="rv d2">Agenda hoy una asesoría sin costo y conoce los terrenos que pueden hacer crecer tu patrimonio.</p>
+    <a class="btn btn-gold rv d3" href="https://wa.me/524779199794?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20asesor%C3%ADa%20sin%20costo." target="_blank" rel="noopener">Agenda tu asesoría
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div class="rv">
+        <span class="eyebrow">Contacto</span>
+        <h2>Comunícate con <em>nosotros</em></h2>
+        <p class="lead">Estamos para resolver tus dudas y acompañarte en tu próxima inversión.</p>
+        <div class="info">
+          <div class="row"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span>
+            <div><small>Dirección</small>FORO 4, Piso 11. Manuel J. Clouthier 304, Jardines del Campestre, 37128 León de los Aldama, Gto.</div></div>
+          <div class="row"><span class="ic"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></span>
+            <div><small>Teléfonos</small><a href="tel:+524777796709">Fijo: (477) 779 67 09</a><br><a href="https://wa.me/524779199794" target="_blank" rel="noopener">WhatsApp: (477) 919 97 94</a></div></div>
+          <div class="row"><span class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 7l9 6 9-6"/></svg></span>
+            <div><small>Correo</small><a href="mailto:torreares@gmail.com">torreares@gmail.com</a></div></div>
+        </div>
+      </div>
+
+      <form id="form" class="rv d1" novalidate>
+        <h3>Envíanos un mensaje</h3>
+        <p>Te responderemos a la brevedad por WhatsApp.</p>
+        <div class="f2">
+          <div class="field"><label for="nombre">Nombre</label><input id="nombre" required autocomplete="name"></div>
+          <div class="field"><label for="tel">Teléfono</label><input id="tel" type="tel" required autocomplete="tel"></div>
+        </div>
+        <div class="field"><label for="correo">Correo</label><input id="correo" type="email" autocomplete="email"></div>
+        <div class="field"><label for="interes">Me interesa</label>
+          <select id="interes">
+            <option>Invertir en terrenos</option>
+            <option>Torre Ares</option>
+            <option>GrandAres</option>
+            <option>Plaza París</option>
+            <option>Alianza: tengo un terreno</option>
+            <option>Otro</option>
+          </select></div>
+        <div class="field"><label for="msg">Mensaje</label><textarea id="msg" rows="3"></textarea></div>
+        <button class="btn btn-dark" type="submit">Enviar mensaje
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        <p class="note">Al enviar se abrirá WhatsApp con tu mensaje listo.</p>
+      </form>
+    </div>
+
+    <div class="map rv">
+      <iframe title="Ubicación Grupo InverAlpe" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        src="https://maps.google.com/maps?q=Manuel%20J.%20Clouthier%20304%2C%20Jardines%20del%20Campestre%2C%2037128%20Le%C3%B3n%2C%20Gto.&z=16&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div>
+        <a href="#inicio" class="brand" aria-label="Grupo InverAlpe">
+          <img src="img/logo.png" alt="Grupo InverAlpe" onerror="this.parentElement.classList.add('noimg')">
+          <span class="wordmark"><b>INVERALPE</b><small>GRUPO</small></span>
+        </a>
+        <p class="tagline">In tempore et modo</p>
+      </div>
+      <div><h4>Navegación</h4><ul><li><a href="#nosotros">Nosotros</a></li><li><a href="#proyectos">Proyectos</a></li><li><a href="#alianzas">Alianzas</a></li><li><a href="#contacto">Contacto</a></li></ul></div>
+      <div><h4>Proyectos</h4><ul><li><a href="https://torreares.com/" target="_blank" rel="noopener">Torre Ares</a></li><li><a href="https://grandares.com/" target="_blank" rel="noopener">GrandAres</a></li><li><a href="#proyectos">Plaza París</a></li></ul></div>
+      <div><h4>Contacto</h4><ul><li><a href="tel:+524777796709">(477) 779 67 09</a></li><li><a href="https://wa.me/524779199794" target="_blank" rel="noopener">WhatsApp (477) 919 97 94</a></li><li><a href="mailto:torreares@gmail.com">torreares@gmail.com</a></li></ul></div>
+    </div>
+    <div class="f-bottom"><span>© <span id="yr">2026</span> Grupo InverAlpe. Todos los derechos reservados.</span><span>León, Guanajuato, México</span></div>
+  </div>
+</footer>
+
+<a class="wa" href="https://wa.me/524779199794?text=Hola%2C%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n." target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+  <svg viewBox="0 0 32 32"><path d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.9 2 7L3 29l6.4-2c2 1.1 4.3 1.7 6.6 1.7 7.2 0 13-5.7 13-12.8S23.2 3 16 3zm0 23.4c-2.1 0-4.1-.6-5.9-1.7l-.4-.3-3.8 1.2 1.2-3.7-.3-.4a10.4 10.4 0 0 1-1.6-5.6C5.2 10 10 5.3 16 5.3S26.8 10 26.8 15.8 22 26.4 16 26.4zm5.9-7.9c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7.1a8.7 8.7 0 0 1-4.4-3.8c-.3-.6.3-.5 1-1.8.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4s-1.2 1.1-1.2 2.7 1.2 3.2 1.4 3.4c.2.2 2.4 3.6 5.8 5 2.2.9 3 1 4 .8.7-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg>
+</a>
+
+<script>
+(function(){
+  var nav=document.getElementById('nav'),burger=document.getElementById('burger');
+  function onScroll(){nav.classList.toggle('solid',window.scrollY>40)}
+  onScroll();window.addEventListener('scroll',onScroll,{passive:true});
+  burger.addEventListener('click',function(){var o=nav.classList.toggle('open');burger.setAttribute('aria-expanded',o);document.body.style.overflow=o?'hidden':''});
+  document.querySelectorAll('#menu a').forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('open');burger.setAttribute('aria-expanded',false);document.body.style.overflow=''})});
+
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+    document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+  }else{document.querySelectorAll('.rv').forEach(function(el){el.classList.add('in')})}
+
+  document.getElementById('yr').textContent=new Date().getFullYear();
+
+  document.getElementById('form').addEventListener('submit',function(e){
+    e.preventDefault();
+    var n=document.getElementById('nombre'),t=document.getElementById('tel');
+    if(!n.value.trim()||!t.value.trim()){(n.value.trim()?t:n).focus();(n.value.trim()?t:n).style.borderColor='#b3261e';return}
+    var txt='Hola, soy '+n.value.trim()+'.\nMe interesa: '+document.getElementById('interes').value+'.\nTeléfono: '+t.value.trim();
+    var c=document.getElementById('correo').value.trim(); if(c) txt+='\nCorreo: '+c;
+    var m=document.getElementById('msg').value.trim(); if(m) txt+='\n\n'+m;
+    window.open('https://wa.me/524779199794?text='+encodeURIComponent(txt),'_blank','noopener');
+  });
+})();
+</script>
+</body>
+</html>
