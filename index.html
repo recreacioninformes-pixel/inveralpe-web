@@ -52,12 +52,13 @@ h2 em,h1 em{font-style:italic;color:var(--gold)}
 .nav.solid{background:rgba(20,19,15,.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);padding:12px 0;box-shadow:0 1px 0 rgba(255,255,255,.06)}
 .nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px}
 .brand{display:flex;align-items:center;gap:12px;color:#fff}
-.brand img{height:54px;width:auto;filter:brightness(0) invert(1);transition:height .4s}
-.nav.solid .brand img{height:44px}
-.brand .wordmark{display:none;font-family:var(--serif);line-height:1}
-.brand .wordmark b{display:block;font-size:1.5rem;font-weight:600;letter-spacing:.14em}
-.brand .wordmark small{font-size:.6rem;letter-spacing:.34em;color:var(--gold-2);font-family:var(--sans)}
-.brand.noimg img{display:none}.brand.noimg .wordmark{display:block}
+.brand img{height:50px;width:auto;transition:height .4s}
+.nav.solid .brand img{height:40px}
+.brand .wordmark{display:block;font-family:var(--serif);line-height:1.05}
+.brand .wordmark b{display:block;font-size:1.35rem;font-weight:600;letter-spacing:.2em}
+.brand .wordmark small{display:block;font-size:.58rem;letter-spacing:.42em;color:var(--gold-2);font-family:var(--sans)}
+.brand.noimg img{display:none}
+footer .brand img{height:150px}footer .brand .wordmark{display:none}footer .brand.noimg .wordmark{display:block}
 .menu{display:flex;align-items:center;gap:34px;list-style:none}
 .menu a{color:rgba(255,255,255,.82);font-size:.76rem;letter-spacing:.18em;text-transform:uppercase;font-weight:500;position:relative;padding:6px 0;transition:color .3s}
 .menu a::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:0;background:var(--gold-2);transition:width .35s var(--ease)}
@@ -72,7 +73,7 @@ h2 em,h1 em{font-style:italic;color:var(--gold)}
 .nav.open .burger span:nth-child(3){top:22px;transform:rotate(-45deg)}
 
 /* ===== HERO ===== */
-.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:flex-end;color:#fff;background:var(--ink) url("img/hero.jpg") center/cover no-repeat;overflow:hidden}
+.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:flex-end;color:#fff;background:url("img/hero.jpg") center/cover no-repeat,url("img/grandares.jpg") center 35%/cover no-repeat,var(--ink);overflow:hidden}
 .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,19,15,.55) 0%,rgba(20,19,15,.25) 35%,rgba(20,19,15,.85) 100%),linear-gradient(90deg,rgba(20,19,15,.75) 0%,rgba(20,19,15,0) 70%)}
 .hero .wrap{position:relative;width:100%;padding-top:160px;padding-bottom:64px}
 .hero h1{color:#fff;font-size:clamp(3rem,8vw,6.6rem);font-weight:400;margin:22px 0 26px;max-width:12ch}
@@ -95,6 +96,10 @@ section{padding:130px 0}
 .about h2{margin-top:22px}
 .about .body p{margin-bottom:22px;color:var(--muted);font-size:1.04rem}
 .about .body p:first-child{font-family:var(--serif);font-size:1.6rem;line-height:1.4;color:var(--ink)}
+.about-img{margin-top:48px;position:relative;border-radius:var(--r);overflow:hidden;aspect-ratio:1/1}
+.about-img img{width:100%;height:100%;object-fit:cover}
+.about-img figcaption{position:absolute;left:0;bottom:0;background:var(--ink);color:#fff;padding:20px 26px;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;display:flex;align-items:center;gap:14px}
+.about-img figcaption b{font-family:var(--serif);font-size:2.4rem;font-weight:400;color:var(--gold-2);letter-spacing:0;line-height:1}
 .motto{margin-top:38px;padding-top:30px;border-top:1px solid var(--line);display:flex;gap:22px;align-items:center}
 .motto span{font-family:var(--serif);font-style:italic;font-size:1.5rem;color:var(--gold-d)}
 .motto small{color:var(--muted);font-size:.85rem;line-height:1.5}
@@ -149,7 +154,7 @@ section{padding:130px 0}
 .steps p{color:rgba(255,255,255,.62);font-size:.95rem}
 
 /* ===== CTA ===== */
-.cta{position:relative;padding:130px 0;color:#fff;text-align:center;background:var(--ink-2) url("img/contacto.jpg") center/cover fixed}
+.cta{position:relative;padding:130px 0;color:#fff;text-align:center;background:url("img/contacto.jpg") center/cover fixed,url("img/plaza-paris.jpg") center/cover fixed,var(--ink-2)}
 .cta::before{content:"";position:absolute;inset:0;background:rgba(20,19,15,.72)}
 .cta .wrap{position:relative}
 .cta h2{color:#fff;margin:22px auto 22px;max-width:18ch}
@@ -183,7 +188,6 @@ form .note{font-size:.78rem;color:var(--muted-l);text-align:center;margin-top:16
 /* ===== FOOTER ===== */
 footer{background:var(--ink);color:rgba(255,255,255,.6);padding:80px 0 34px;font-size:.92rem}
 .f-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:50px;padding-bottom:60px;border-bottom:1px solid rgba(255,255,255,.1)}
-footer .brand img{height:70px}
 footer .tagline{font-family:var(--serif);font-style:italic;font-size:1.25rem;color:var(--gold-2);margin-top:22px}
 footer h4{font-size:.7rem;letter-spacing:.26em;text-transform:uppercase;color:#fff;margin-bottom:22px;font-weight:600}
 footer ul{list-style:none;display:grid;gap:12px}
@@ -244,8 +248,8 @@ footer a:hover{color:var(--gold-2)}
 <header class="nav" id="nav">
   <div class="wrap">
     <a href="#inicio" class="brand" id="brand" aria-label="Grupo InverAlpe, inicio">
-      <img src="img/logo.png" alt="Grupo InverAlpe" onerror="this.parentElement.classList.add('noimg')">
-      <span class="wordmark"><b>INVERALPE</b><small>GRUPO</small></span>
+      <img src="img/isotipo.png" alt="" onerror="this.parentElement.classList.add('noimg')">
+      <span class="wordmark"><small>GRUPO</small><b>INVERALPE</b></span>
     </a>
     <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
     <ul class="menu" id="menu">
@@ -284,6 +288,7 @@ footer a:hover{color:var(--gold-2)}
     <div class="rv">
       <span class="eyebrow">Quiénes somos</span>
       <h2>Construimos <em>patrimonio</em> con visión de largo plazo.</h2>
+      <figure class="about-img"><img src="img/nosotros.jpg" alt="Terraza de un desarrollo de Grupo InverAlpe" loading="lazy"><figcaption><b>+10</b> años de experiencia</figcaption></figure>
     </div>
     <div class="body rv d1">
       <p>Somos una empresa mexicana especializada en el desarrollo, construcción y comercialización de terrenos, enfocada en crear oportunidades de inversión seguras, accesibles y con alta plusvalía.</p>
@@ -463,7 +468,6 @@ footer a:hover{color:var(--gold-2)}
           <img src="img/logo.png" alt="Grupo InverAlpe" onerror="this.parentElement.classList.add('noimg')">
           <span class="wordmark"><b>INVERALPE</b><small>GRUPO</small></span>
         </a>
-        <p class="tagline">In tempore et modo</p>
       </div>
       <div><h4>Navegación</h4><ul><li><a href="#nosotros">Nosotros</a></li><li><a href="#proyectos">Proyectos</a></li><li><a href="#alianzas">Alianzas</a></li><li><a href="#contacto">Contacto</a></li></ul></div>
       <div><h4>Proyectos</h4><ul><li><a href="https://torreares.com/" target="_blank" rel="noopener">Torre Ares</a></li><li><a href="https://grandares.com/" target="_blank" rel="noopener">GrandAres</a></li><li><a href="#proyectos">Plaza París</a></li></ul></div>
